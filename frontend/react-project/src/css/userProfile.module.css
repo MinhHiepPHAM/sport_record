@@ -1,0 +1,99 @@
+.mainContainer {
+	display: flex;
+	height: 100%;
+	/* border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4)); */
+}
+.navbar {
+	/* background-color: var(--mantine-color-body); */
+	max-width: rem(300px);
+	padding: var(--mantine-spacing-md);
+	display: flex;
+	flex-direction: column;
+	border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+	border-top: rem(1px) solid light-dark(var(--mantine-color-white), var(--mantine-color-dark-9));
+	background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-4));
+}
+  
+.section {
+	margin-left: 0;
+	margin-right: calc(var(--mantine-spacing-md) * -1);
+	margin-bottom: var(--mantine-spacing-md);
+	margin-top: var(--mantine-spacing-xl);
+
+	&:not(:last-of-type) {
+		border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+	}
+}
+
+.mainLink {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-size: var(--mantine-font-size-xs);
+	padding: rem(8px) var(--mantine-spacing-xs);
+	border-radius: var(--mantine-radius-sm);
+	font-weight: 500;
+	color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+
+	&:hover {
+		background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6));
+		color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
+	}
+}
+
+.mainLinkInner {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.mainLinkIcon {
+	margin-right: var(--mantine-spacing-sm);
+	color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-dark-2));
+}
+
+.messIcon {
+	margin-right: var(--mantine-spacing-sm);
+	color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-white));
+}
+
+.mainLinkBadge {
+	padding: 0;
+	width: rem(20px);
+	height: rem(20px);
+	margin-left: rem(100px);
+	pointer-events: none;
+}
+
+.userContainer {
+	margin-top: 25px;
+}
+
+.userInfo {
+	background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-4));
+}
+
+.mainUserInner {
+  display: flex;
+  align-items: left;
+}
+
+.profileAbout {
+	color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-white));
+	margin-top: 10px;
+}
+
+.profileFieldValue {
+	color: light-dark(var(--mantine-color-gray-9), var(--mantine-color-white));
+}
+
+.activityTitle {
+	display: flex;
+	align-items: left;
+	color: var(--mantine-color-blue-5);
+	/* margin-bottom: 15px; */
+}
+
+.recentAward {
+	background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
+}

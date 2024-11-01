@@ -1,0 +1,12 @@
+.activityBackground {
+	background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-4));
+}
+
+.activityIcon {
+	margin-right: var(--mantine-spacing-sm);
+	color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-dark-2));
+}
+
+.typeIcon {
+	color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-white));
+}
