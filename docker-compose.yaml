@@ -1,0 +1,41 @@
+services:
+  backend:
+    build: ./backend/project
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./backend/project:/backend
+
+    environment:
+      - DATABASE_NAME=${DB_NAME}
+      - DATABASE_USER=${DB_USER}
+      - DATABASE_PASSWORD=${DB_PASSWORD}
+    
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    
+    restart: always
+
+    depends_on:
+      - db_host
+
+  db_host:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data/db_host:/var/lib/postgresql/data
+      
+  frontend:
+    build: ./frontend/react-project
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/react-project:/frontend
+volumes:
+  my_app:
